@@ -15,29 +15,30 @@ The aim is trying to find all twin prime between 1-2000. This is a parallel prog
 
 using namespace std;
 
-#define NUM_THREADS 8
+#define NUM_THREADS 1
 
-/* 
-Only needed if wished to output all twin prime.
-In this scenario, count of twin primes only is desired
+//Code used to print every twin prime in output
 void printDeque(deque<int>primeNums)
 {
     int count = 0;
     omp_set_num_threads(NUM_THREADS);
-    #pragmq omp parallel for
+    #pragma omp parallel for
     for (int i = 0; i < primeNums.size() -1; i++)
     {
-        /*cout << primeNums.at(i+1) - primeNums.at(i) == 2)
+        if(primeNums.at(i+1) - primeNums.at(i) == 2)
         {
-            /* cout << primeNums.at(i) << ","
-            << primeNums.at(i+1) << endl; */
-            /* count +=1;
+             cout << primeNums.at(i) << ","
+            << primeNums.at(i+1) << endl; 
+             count +=1;
 
         }
+    
+    cout << "Pairs of Twin Prime Numbers: " << count << endl;
     }
-    cout << "Pairs of Tein Prime Numbers: " << count << endl;
-}*/
-
+}
+// divide each number with different prime numbers. e.g. if 27 is a prime, one thread will divide 27 by 2 and another thread 27 by 5. 
+//Reason: 27/2:localNum = 1 remainder
+// 27/3:localNum = 0 remainder 
 void findPrime_innerLoop(deque <int>primeNums, int maxNumber)
 {
     int count = 0;
@@ -48,17 +49,18 @@ void findPrime_innerLoop(deque <int>primeNums, int maxNumber)
             //redirect function for isPrimeNUm needed
             omp_set_num_threads(NUM_THREADS);
             #pragma omp parallel for reduction(+:isPrimeNum)
+            
                 for (int j = 0; j < primeNums.size(); j++)
                 {
-                        int local = 0;
+                        int localNum = 0;
                     if(number % primeNums[j] == 0) 
                     {
-                        local = 0;
+                        localNum = 0;
                     }
                     else
                     {
-                            local = 1;
-                            isPrimeNum = local + isPrimeNum;
+                            localNum = 1;
+                            isPrimeNum = localNum + isPrimeNum;
                     }
                     
                 }
@@ -71,15 +73,33 @@ void findPrime_innerLoop(deque <int>primeNums, int maxNumber)
                     }
             }
             cout << "Pairs of Twin Prime" << count << endl;
-            //printDeque(primeNUms);
+            printDeque(primeNums);
+            }
 }
 
-void main()
-;{
+int main (int argc, char* argv[])
+{
     double durationPeriod = 0.00;
     clock_t startClock;
     deque<int> primeNums; //stores all the found prime nums here
     primeNums.push_back(2);
+    primeNums.push_back(3);
+    primeNums.push_back(5);      
+    primeNums.push_back(7);
+    primeNums.push_back(11);
+    primeNums.push_back(13);
+    primeNums.push_back(17);
+    primeNums.push_back(19);
+    primeNums.push_back(23);
+    primeNums.push_back(29);
+    primeNums.push_back(31);
+    primeNums.push_back(37);
+    primeNums.push_back(41);
+    primeNums.push_back(43);
+    primeNums.push_back(47);
+
+
+
     int maxNumber = 50;
     startClock = clock();
     findPrime_innerLoop(primeNums, maxNumber);
@@ -87,8 +107,11 @@ void main()
 
     cout << "\n Time to compute: " << durationPeriod << "seconds" << endl; //total num of secs passed
     cout<< endl;
+
     system("pause");
+    
 }
+    
 
 
 

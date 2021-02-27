@@ -1,0 +1,52 @@
+.TH "multithread.cpp" 3 "Sat Feb 27 2021" "Twin Primes" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+multithread.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <deque>\fP
+.br
+\fC#include <omp\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <ctime>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNUM_THREADS\fP   5"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBprintDeque\fP (deque< int >primeNums)"
+.br
+.ti -1c
+.RI "void \fBfindPrime_innerLoop\fP (deque< int >primeNums, int maxNumber)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define NUM_THREADS   5"
+
+.SH "Function Documentation"
+.PP 
+.SS "void findPrime_innerLoop (deque< int > primeNums, int maxNumber)"
+
+.SS "int main (int argc, char * argv[])"
+
+.SS "void printDeque (deque< int > primeNums)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Twin Primes from the source code\&.

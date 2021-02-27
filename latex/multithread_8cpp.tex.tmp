@@ -1,0 +1,52 @@
+\section{multithread.\+cpp File Reference}
+\label{multithread_8cpp}\index{multithread.\+cpp@{multithread.\+cpp}}
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+Include dependency graph for multithread.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ N\+U\+M\+\_\+\+T\+H\+R\+E\+A\+DS}~5
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ print\+Deque} (deque$<$ int $>$prime\+Nums)
+\item 
+void \textbf{ find\+Prime\+\_\+inner\+Loop} (deque$<$ int $>$prime\+Nums, int max\+Number)
+\item 
+int \textbf{ main} (int argc, char $\ast$argv[$\,$])
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\label{multithread_8cpp_a7735206bdfad487588bba2126b806ab7}} 
+\index{multithread.\+cpp@{multithread.\+cpp}!N\+U\+M\+\_\+\+T\+H\+R\+E\+A\+DS@{N\+U\+M\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\index{N\+U\+M\+\_\+\+T\+H\+R\+E\+A\+DS@{N\+U\+M\+\_\+\+T\+H\+R\+E\+A\+DS}!multithread.\+cpp@{multithread.\+cpp}}
+\subsubsection{N\+U\+M\+\_\+\+T\+H\+R\+E\+A\+DS}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+T\+H\+R\+E\+A\+DS~5}
+
+
+
+\subsection{Function Documentation}
+\mbox{\label{multithread_8cpp_a88bcb410fb32e2c57684ede7b957d8b3}} 
+\index{multithread.\+cpp@{multithread.\+cpp}!find\+Prime\+\_\+inner\+Loop@{find\+Prime\+\_\+inner\+Loop}}
+\index{find\+Prime\+\_\+inner\+Loop@{find\+Prime\+\_\+inner\+Loop}!multithread.\+cpp@{multithread.\+cpp}}
+\subsubsection{find\+Prime\+\_\+inner\+Loop()}
+{\footnotesize\ttfamily void find\+Prime\+\_\+inner\+Loop (\begin{DoxyParamCaption}\item[{deque$<$ int $>$}]{prime\+Nums,  }\item[{int}]{max\+Number }\end{DoxyParamCaption})}
+
+\mbox{\label{multithread_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{multithread.\+cpp@{multithread.\+cpp}!main@{main}}
+\index{main@{main}!multithread.\+cpp@{multithread.\+cpp}}
+\subsubsection{main()}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv[$\,$] }\end{DoxyParamCaption})}
+
+\mbox{\label{multithread_8cpp_ab0a0a8fbfa1caf00edcce2789ade856c}} 
+\index{multithread.\+cpp@{multithread.\+cpp}!print\+Deque@{print\+Deque}}
+\index{print\+Deque@{print\+Deque}!multithread.\+cpp@{multithread.\+cpp}}
+\subsubsection{print\+Deque()}
+{\footnotesize\ttfamily void print\+Deque (\begin{DoxyParamCaption}\item[{deque$<$ int $>$}]{prime\+Nums }\end{DoxyParamCaption})}
+
