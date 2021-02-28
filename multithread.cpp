@@ -5,7 +5,6 @@
 
 /* A prime pair, aka twin prime, is a prime number that has a prime gap of two, i.e., differs   
 from  another prime number by two, e.g. the twin prime pair (41, 43).
-The aim is trying to find all twin prime between 1-2000. This is a parallel program in OpenMP.
 */
 
 #include <deque> 
